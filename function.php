@@ -31,7 +31,7 @@ function get_user_id($device_id)
 
 function get_filter_time()
 {
-    global $IS_DEVELOPMENT;
+    global $IS_DEVELOPMENT, $url_static_time;
     
     if ($IS_DEVELOPMENT == false) {
         $filter_time = "NOW() <= COALESCE(expired_date, NOW())"; 
